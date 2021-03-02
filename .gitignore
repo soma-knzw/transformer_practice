@@ -1,0 +1,50 @@
+# --------------------
+# Repository
+# --------------------
+data/
+results/
+checkpoints/
+mlruns/
+wandb/
+blender/
+
+__pycache__/
+.ipynb_checkpoints/
+.venv
+.vscode
+.python-version
+Pipfile.lock
+
+*.log
+*.pt
+
+*.prof
+*.lprof
+
+
+# --------------------
+# Packages
+# --------------------
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+
+# --------------------
+# OS files
+# --------------------
+.DS_Store
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+
+# --------------------
+# Special files
+# --------------------
+slack_notificate.sh
