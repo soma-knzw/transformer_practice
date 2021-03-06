@@ -15,6 +15,7 @@ line-profiler = "*"
 sphinx = "*"
 sphinx_rtd_theme = "*"
 doq = "*"
+autopep8 = "*"
 
 [packages]
 torch = "==1.2.0"
@@ -41,7 +42,6 @@ jedi = "*"
 # Lint tools
 pep8 = "*"
 flake8 = "*"
-
 # Don't forget to install wkhtmltopdf
 # for dialogue summariser
 imgkit = "*"
