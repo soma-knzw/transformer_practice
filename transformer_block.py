@@ -18,18 +18,18 @@ class TransformerBlock(nn.Module):
 
         self.dropout = nn.Dropout(dropout)
 
-        def forward(self, value, key, query, mask):
-            attention = self.attention(value, key, query, mask)
+    def forward(self, value, key, query, mask):
+        attention = self.attention(value, key, query, mask)
 
-            # add skip connection, run through norm and funally dopout
-            x = self.norm1(attention + query)
-            x = self.dropout(x)
+        # add skip connection, run through norm and funally dopout
+        x = self.norm1(attention + query)
+        x = self.dropout(x)
 
-            # feed_forward layers
-            forward = self.feed_forward(x)
+        # feed_forward layers
+        forward = self.feed_forward(x)
 
-            # skip connection, run through norm and dropout
-            x = self.norm2(forward + x)
-            x = self.dropout(x)
+        # skip connection, run through norm and dropout
+        x = self.norm2(forward + x)
+        x = self.dropout(x)
 
-            return x
+        return x
