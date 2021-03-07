@@ -21,8 +21,9 @@ class Encoder(nn.Module):
         self.word_embedding = nn.Embedding(src_vocab_size, embed_size)
         self.position_embedding = nn.Embedding(max_length, embed_size)
 
-        self.layers = nn.ModuleList([TransformerBlock(
-            embed_size, heads, dropout, forward_expansion) for _ in range(num_layers)])
+        self.layers = nn.ModuleList(
+            [TransformerBlock(embed_size, heads, dropout, forward_expansion)
+             for _ in range(num_layers)])
 
         self.dropout = nn.Dropout(dropout)
 
