@@ -34,7 +34,7 @@ class SelfAttention(nn.Module):
         # queries shape: (N, query_len, heads, heads_dim)
         # keys shape: (N, key_len, heads, heads_dim)
         # energy shape: (N, heads, query_len, key_len)
-        energy = torch.einsum('nqhd, nkhd->nhqk', [query, keys])
+        energy = torch.einsum('nqhd, nkhd->nhqk', [queries, keys])
 
         # query_len is target source sentence, key_len is source sentence
         if mask is not None:
