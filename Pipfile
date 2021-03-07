@@ -7,43 +7,12 @@ verify_ssl = true
 python_version = "3.7"
 
 [dev-packages]
-pydevd-pycharm = "~=201.8538.36"  # Version must be corresponds to the pycharm version.
-pudb = "*"
-torchsummary = "*"
-line-profiler = "*"
-# Documentations
-sphinx = "*"
-sphinx_rtd_theme = "*"
-doq = "*"
 autopep8 = "*"
 
 [packages]
 torch = "==1.2.0"
-torchvision = "==0.4.0"
-numpy = "*"
-jupyterlab = "*"
-ipykernel = "*"
-matplotlib = "*"
-opencv-python = "*"
-seaborn = "*"
-h5py = "*"
-tqdm = "*"
-pillow = "*"
-fastprogress = "*"
-wandb = "*"
-joblib = "*"
-rainbow_logging_handler = "*"
-gdown = "*"
-adabelief-pytorch = "==0.1.0"
-# for Vimmer
-pynvim = "*"
-neovim = "*"
 jedi = "*"
 # Lint tools
 pep8 = "*"
 flake8 = "*"
-# Don't forget to install wkhtmltopdf
-# for dialogue summariser
-imgkit = "*"
-pdfkit = "*"
-pyppeteer = "*"  # an alternative choice
+
