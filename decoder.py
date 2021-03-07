@@ -47,3 +47,5 @@ class Decoder(nn.Module):
             x = layer(x, enc_out, enc_out, src_mask, trg_mask)
 
         out = self.fc_out(x)
+
+        return out
