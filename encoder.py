@@ -27,22 +27,21 @@ class Encoder(nn.Module):
 
         self.dropout = nn.Dropout(dropout)
 
-        def forward(self, x, mask):
-            N, seq_length = x.shape
-            positions = torch.arange(
-                0,
-                seq_length
-            ).expand(
-                N,
-                seq_length
-            ).to(
-                self.device)
+    def forward(self, x, mask):
+        N, seq_length = x.shape
+        positions = torch.arange(
+            0,
+            seq_length
+        ).expand(
+            N,
+            seq_length
+        ).to(
+            self.device)
 
-            x = self.dropout(
-                self.word_embedding(x) + self.position_embedding(positions)
-            )
+        x = self.dropout(
+            self.word_embedding(x) + self.position_embedding(positions)
+        )
 
-            for layer in self.layers:
-                x = layer(x, x, x, mask)
-
-            return x
+        for layer in self.layers:
+            x = layer(x, x, x, mask)
+        return x
